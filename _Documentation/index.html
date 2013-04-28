@@ -1,0 +1,1387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>SmartStart - Responsive HTML5 Template: Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/prettify/prettify.css" type="text/css" media="screen, projection">
+</head>
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;SmartStart - Responsive HTML5 Template&rdquo; Documentation by &ldquo;Smuliii&rdquo; v1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">SmartStart - Responsive HTML5 Template</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>Created:</strong> 24.2.2012<br>
+					<strong>By:</strong> Samuli Saarinen<br>
+					<strong>Follow me on: <a href="http://twitter.com/Smuliii/">Twitter</a><br>
+					<a href="http://themeforest.net/user/Smuliii/" class="follow-2">Themeforest</a></strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/smuliii/#from">here</a>. You can also follow me on Twitter and Themeforest to keep track of all my theme updates and future themes. Thanks so much! :)</p>
+			</div>
+
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#html-structure">HTML Files &amp; Structure</a>
+				<ol>
+					<li><a href="#basics">Basics</a>
+						<ol>			
+							<li><a href="#header">Header</a></li>
+							<li><a href="#content">Content</a></li>
+							<li><a href="#sidebar">Sidebar</a></li>
+							<li><a href="#footer">Footer</a></li>
+						</ol>
+					</li>
+					<li><a href="#slider">Homepage Slider</a></li>
+					<li><a href="#subpages">Subpages</a>
+						<ol>			
+							<li><a href="#blog">Blog</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contact-form">Contact Form</a></li>
+						</ol>
+					</li>
+					<li><a href="#php-widgets">PHP Widgets</a></li>
+					<li><a href="#elements">Elements</a></li>
+					<li><a href="#pricing-tables">Pricing Tables</a></li>
+				</ol>
+			</li>
+			<li><a href="#css">CSS Files &amp; Structure</a></li>
+			<li><a href="#javascript">Javascript Plugins/Scripts</a>
+				<ol>
+					<li><a href="#js-homepage-slider">Homepage Slider</a></li>
+					<li><a href="#js-fancybox">Fancybox</a></li>
+					<li><a href="#js-portfolio-filter">Portfolio Filter</a></li>
+					<li><a href="#js-carousel">Projects Carousel & Post Carousel</a></li>
+					<li><a href="#js-html5-video-audio">HTML5 video & audio</a></li>
+					<li><a href="#js-google-maps">Google Maps</a></li>
+				</ol>
+			</li>
+			<li><a href="#psds">PSDs</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#changelog">Changelog</a></li>
+		</ol>
+		
+		<hr>
+		
+		<p class="error">One important note before you start working on this theme! Although the theme <u>should</u> work just fine "straight from the desktop", some of the theme features may require a real web server (local or online) to work properly. So keep that in mind!</p>
+		
+		<h2 id="html-structure"><strong>A) HTML Files &amp; Structure</strong> - <a href="#toc">top</a></h2>
+		
+		<h3 id="basics">A. 1) Basics</h3>
+		
+		<p>All the pages have been divided into four "main" sections: <code class="prettyprint">#header</code>, <code class="prettyprint">#content</code>, <code class="prettyprint">#footer</code> and <code class="prettyprint">#footer-bottom</code>.<br>
+		<code class="prettyprint">.container</code> determines the page width and also centralize it. You can adjust this width from <strong>css/style.css</strong> file.</p>
+			
+		<p>Simplified example of fullwidth page structure:</p>
+	
+<pre class="prettyprint lines">
+&lt;header id="header" class="container clearfix"&gt;
+    
+    [HEADER_CONTENT_HERE]
+
+&lt;/header&gt;&lt;!-- end #header --&gt;
+
+&lt;section id="content" class="container clearfix"&gt;
+
+    [CONTENT_HERE]
+        
+&lt;/section&gt;&lt;!-- end #content --&gt;
+
+&lt;footer id="footer" class="clearfix"&gt;
+    
+    &lt;div class="container"&gt;
+    
+        [FOOTER_CONTENT_HERE]
+
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+
+&lt;/footer&gt;&lt;!-- end #footer --&gt;
+
+&lt;footer id="footer-bottom" class="clearfix"&gt;
+    
+    &lt;div class="container"&gt;
+    
+        [FOOTER_BOTTOM_CONTENT_HERE]  
+
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+
+&lt;/footer&gt;&lt;!-- end #footer-bottom --&gt;
+</pre>
+    
+        <p>You have also option to split content area into two part, which allow you to have a sidebar.</p>
+    
+        <p>Simplified example of page structure with a sidebar:</p>
+    
+<pre class="prettyprint lines">
+&lt;header id="header" class="container clearfix"&gt;
+    
+    [HEADER_CONTENT_HERE]
+
+&lt;/header&gt;&lt;!-- end #header --&gt;
+
+&lt;section id="content" class="container clearfix"&gt;
+
+    &lt;section id="main"&gt;
+    
+        [MAIN_CONTENT_HERE]
+
+    &lt;/section&gt;&lt;!-- end #main --&gt;
+
+    &lt;aside id="sidebar"&gt;
+    
+        [SIDEBAR_CONTENT_HERE]
+    
+    &lt;/aside&gt;&lt;!-- end #sidebar --&gt;
+        
+&lt;/section&gt;&lt;!-- end #content --&gt;
+
+&lt;footer id="footer" class="clearfix"&gt;
+    
+    &lt;div class="container"&gt;
+    
+        [FOOTER_CONTENT_HERE]
+
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+
+&lt;/footer&gt;&lt;!-- end #footer --&gt;
+
+&lt;footer id="footer-bottom" class="clearfix"&gt;
+    
+    &lt;div class="container"&gt;
+    
+        [FOOTER_BOTTOM_CONTENT_HERE]  
+
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+
+&lt;/footer&gt;&lt;!-- end #footer-bottom --&gt;
+</pre>
+
+    	<hr>
+		
+		<h3 id="header">A. 1.1) Basics &raquo; <em>Header</em></h3>
+		
+		<h4>Logo</h4>
+		
+		<p>If the logo height is more than 86px, you may need to change <code class="prettyprint">#header</code> and <code class="prettyprint">#logo</code> height settings from the <strong>css/style.css</strong> file.</p>
+
+		<hr>
+		
+		<h4>Navigation</h4>
+		
+		<p>Navigation is just basic unordered list so nothing special here, except you can use <code class="prettyprint">.data-description</code> attribute to describe the page in a few words. And <code class="prettyprint">.current</code> obviously indicates the active page.</p>
+
+		<hr>
+		
+		<h3 id="content">A. 1.2) Basics &raquo; <em>Content</em></h3>
+		
+		<h4>Page Header</h4>
+		
+		<p>You can place your subpage title in <code class="prettyprint">.page-header</code> to give it a little style. Available heading classes:</p>
+		
+		<ul>
+			<li><code class="prettyprint">.slogan</code></li>
+			<li><code class="prettyprint">.page-title</code></li>
+			<li><code class="prettyprint">.page-description</code></li>
+			<li><code class="prettyprint">.page-subdescription</code></li>
+			<li><code class="prettyprint">.project-title</code></li>
+		</ul>
+		
+		<p>And an example:</p>
+		
+<pre class="prettyprint lines">
+&lt;header class="page-header"&gt;
+
+    &lt;h1 class="page-title"&gt; [TITLE] &lt;/h1&gt;
+
+    &lt;hr /&gt;
+
+    &lt;h2 class="page-description"&gt; [DESCRIPTION] &lt;/h2&gt;
+    
+&lt;/header&gt;&lt;!-- end .page-header --&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>Columns</h4>
+		
+		<p>You can easily divide your content between columns by using these classes:</p>
+		
+		<ul>
+			<li><code class="prettyprint">.one-half</code></li>
+			<li><code class="prettyprint">.one-third</code></li>
+			<li><code class="prettyprint">.two-third</code></li>
+			<li><code class="prettyprint">.one-fourth</code></li>
+			<li><code class="prettyprint">.three-fourth</code></li>
+		</ul>
+		
+		<p>You will need to remember to use class <code class="prettyprint">.last</code> in the last column of every row, as well as to add div with class <code class="prettyprint">.clear</code> to clear all floats. Like for example:</p>
+			
+<pre class="prettyprint lines">
+&lt;div class="one-third"&gt;
+
+    [CONTENT]
+        
+&lt;/div&gt;&lt;!-- end .one-third --&gt;
+
+&lt;div class="one-third"&gt;
+
+    [CONTENT]
+        
+&lt;/div&gt;&lt;!-- end .one-third --&gt;
+
+&lt;div class="one-third last"&gt;
+
+    [CONTENT]
+        
+&lt;/div&gt;&lt;!-- end .one-third last --&gt;
+
+&lt;div class="clear"&gt;&lt;/div&gt;    
+</pre>
+		
+		<p>You can check all sample columns from <strong>columns.html</strong> file.</p>
+
+		<hr>
+		
+		<h3 id="sidebar">A. 1.3) Basics &raquo; <em>Sidebar</em></h3>
+		
+		<h4>Widgets</h4>
+		
+		<p>Basic sidebar widget template:</p>
+		
+<pre class="prettyprint lines">
+&lt;div class="widget">
+
+    &lt;h6 class="widget-title"&gt; [TITLE] &lt;/h6&gt;
+
+    [CONTENT]
+
+&lt;/div&gt;&lt;!-- end .widget --&gt;
+</pre>
+
+		<hr>
+		
+		<h3 id="footer">A. 1.4) Basics &raquo; <em>Footer</em></h3>
+		
+		<p>You can use the same column classes in footer just like in the content area.</p>
+
+		<hr>
+		
+		<h3 id="slider">A. 2) Homepage Slider</h3>
+		
+		<p>All slides are placed inside of <code class="prettyprint">.ss-slider</code>. Remember to keep <code class="prettyprint">.slide-bg-image</code> in image tags to avoid any visual issues.</p>
+		
+		<p>Also, you don't need to have any content in <code class="prettyprint">.slide-content</code> div, but you shouldn't remove it, or otherwise pagination arrows may won't work properly.</p>
+		
+		<p>Here is the basic slide template:</p>
+					
+<pre class="prettyprint lines">
+&lt;article class="slide"&gt;
+
+    &lt;img src=" [IMAGE_LOCATION] " alt="" class="slide-bg-image" /&gt;
+    
+    &lt;div class="slide-button"&gt; [BUTTON_CONTENT] &lt;/div&gt;
+
+    &lt;div class="slide-content"&gt; [SLIDE_CONTENT] &lt;/div&gt;
+    
+&lt;/article&gt;&lt;!-- end .slide --&gt;
+</pre>
+		
+		<p>You can also use images in <code class="prettyprint">.slide-button</code>. Then you just need to give class <code class="prettyprint">.image</code> to <code class="prettyprint">.slide-button</code>, so the image will be positioned correctly.</p>
+		
+<pre class="prettyprint lines">
+&lt;div class="slide-button image"&gt;
+	&lt;img src=" [IMAGE] " alt="" /&gt;
+&lt;/div&gt;
+</pre>
+		
+		<p>You have also option to link slides to another page:</p>
+		
+<pre class="prettyprint lines">
+&lt;article class="slide"&gt;
+
+    &lt;a href=" [PAGE_LINK] "&gt;
+
+        &lt;img src=" [IMAGE_LOCATION] " alt="" class="slide-bg-image" /&gt;
+        
+        &lt;div class="slide-button"&gt; [BUTTON_CONTENT] &lt;/div&gt;
+    
+    &lt;a/&gt;
+
+    &lt;div class="slide-content"&gt; [SLIDE_CONTENT] &lt;/div&gt;
+    
+&lt;/article&gt;&lt;!-- end .slide --&gt;
+</pre>
+		
+		<p>And Fancybox will also work just fine (excluding gallery):</p>
+		
+<pre class="prettyprint lines">
+&lt;article class="slide"&gt;
+
+    &lt;a href=" [IMAGE_LINK] " class="single-image"&gt;
+
+        &lt;img src=" [IMAGE_LOCATION] " alt="" class="slide-bg-image" /&gt;
+        
+        &lt;div class="slide-button"&gt; [BUTTON_CONTENT] &lt;/div&gt;
+    
+    &lt;a/&gt;
+
+    &lt;div class="slide-content"&gt; [SLIDE_CONTENT] &lt;/div&gt;
+    
+&lt;/article&gt;&lt;!-- end .slide --&gt;
+</pre>
+
+		<p>You can find more info about the slider options in the <a href="#js-homepage-slider">Javascript section</a>.</p>
+
+		<hr>
+		
+		<h3 id="subpages">A. 3) Subpages</h3>
+		
+		<p></p>
+
+		<hr>
+		
+		<h3 id="blog">A. 3.1) Subpages &raquo; <em>Blog</em></h3>
+		
+		<p>All blog post entries have been divided in two parts: <code class="prettyprint">.entry-body</code> and <code class="prettyprint">.entry-meta</code>.</p>
+		
+<pre class="prettyprint lines">
+&lt;article class="entry clearfix"&gt;
+
+    &lt;div class="entry-body"&gt;
+
+        &lt;a href="#"&gt;
+            &lt;h1 class="title"&gt; [TITLE] &lt;/h1&gt;
+        &lt;/a&gt;
+
+        [CONTENT]
+        
+    &lt;/div&gt;&lt;!-- end .entry-body --&gt;
+
+    &lt;div class="entry-meta"&gt;
+
+        [META_INFO]
+
+    &lt;/div&gt;&lt;!-- end .entry-meta --&gt;
+	
+&lt;/article&gt;&lt;!-- end .entry --&gt;
+</pre>
+		
+		<p>You have also available to use seven different post formats icons:</p>
+		
+		<ul>
+			<li><code class="prettyprint">.gallery</code></li>
+			<li><code class="prettyprint">.image</code></li>
+			<li><code class="prettyprint">.video</code></li>
+			<li><code class="prettyprint">.audio</code></li>
+			<li><code class="prettyprint">.link</code></li>
+			<li><code class="prettyprint">.quote</code></li>
+			<li><code class="prettyprint">.aside</code></li>
+		</ul>
+		
+		<p>So for example in video post:</p>
+		
+<pre class="prettyprint lines">
+&lt;span class="post-format video"&gt;Permalink&lt;/span&gt;
+</pre>
+		<hr>
+		
+		<h3 id="portfolio">A. 3.2) Subpages &raquo; <em>Portfolio</em></h3>
+		
+		<h4>Portfolio Filter</h4>
+		
+		<p>All projects are placed in <code class="prettyprint">#portfolio-items</code> and every project is a single <code class="prettyprint">&lt;article&gt;</code>. Every project has <code class="prettyprint">data-categories</code> attribute which will be used in filtering them. A single project can has multiple categories and they need to be separated with space. There isn't any naming rules but you should use only lowercase and single word (use dash to replace spaces) names to avoid any possible issues. And you don't need to use class <code class="prettyprint">.last</code> with portfolio items, like usually with columns.</p>
+		
+		<p>Basic template:</p>
+		
+<pre class="prettyprint lines">
+&lt;article class="one-fourth" data-categories=" [CATEGORIES] "&gt;
+
+    &lt;img src=" [IMAGE] " alt=""&gt;
+
+    &lt;a href="#" class="project-meta"&gt;
+        &lt;h5 class="title"&gt; [TITLE] &lt;/h5&gt;
+        &lt;span class="categories"&gt; [CATEGORIES] &lt;/span&gt;
+    &lt;/a&gt;
+	
+&lt;/article&gt;&lt;!-- end .one-fourth --&gt;
+</pre>
+		
+		<p>Example of filter:</p>
+		
+<pre class="prettyprint lines">
+&lt;ul id="portfolio-items-filter"&gt;
+
+    &lt;li&gt;&lt;a data-categories="*"&gt;All&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a data-categories="animation"&gt;Animation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a data-categories="design"&gt;Design&lt;/a&gt;&lt;/li&gt;	
+    [...]
+
+&lt;/ul&gt;&lt;!-- end #portfolio-items-filter --&gt;
+</pre>
+		
+		<p>Star selector (*) is used to select all items (just like in CSS).</p>
+
+		<hr>
+		
+		<h4>Single Project</h4>
+		
+		<p>Single project has its own slider which can contain any content (images, videos etc.). In demo it has images but there isn't any restrictions what you can or what you can't use in it.</p>
+		
+		<p>Basic slider:</p>
+		
+<pre class="prettyprint lines">
+&lt;div class="image-gallery-slider"&gt;
+
+    &lt;ul&gt;
+
+        &lt;li&gt;
+            &lt;img src=" [IMAGE] " alt=""&gt;
+        &lt;/li&gt;
+
+        [...]
+
+    &lt;/ul&gt;
+	
+&lt;/div&gt;&lt;!-- end .image-gallery-slider --&gt;
+</pre>
+		
+		<p>And you can use this very same slider in blog posts as well.</p>
+		
+		<hr>
+		
+		<h3 id="contact-form">A. 3.3) Subpages &raquo; <em>Contact Form</em></h3>
+		
+		<p>Setting up the contact form is really simple task. All you need to do is to open <strong>php/config.php</strong> file and replace <code class="prettyprint">$your_email_address</code> value with your own one and that's it!</p>
+
+		<hr>
+
+		<hr>
+		
+		<h3 id="php-widgets">A. 4) PHP Widgets</h3>
+		
+		<p>Just like with the contact form, all the widget settings can be be changed from the <strong>php/config.php</strong> file. All settings should be pretty self-explanatory.</p>
+		
+		<p>Both <em>Latest Tweets</em> and <em>Latest Flickr Images</em> will be cached for one hour at the time to prevent excessive downloading (however cache time can be also changed). In case cache files for same reason won't appear in <strong>php/cache</strong> folder, try to chmod <strong>cache</strong> folder to <strong>777</strong>. If you don't know how to do that, here's an excellent guide: <a href="http://www.phpjunkyard.com/tutorials/ftp-chmod-tutorial.php">FTP and CHMOD Tutorial</a>.</p>
+
+		<hr>
+		
+		<h3 id="elements">A. 5) Elements</h3>		
+		
+		<p>All of these elements can be found from the <strong>elements.html</strong> file.</p>
+		
+		<h4>Accordion</h4>
+				
+		<p>You can also use heading tags with <code class="prettyprint">.acc-trigger</code>.</p>
+		
+<pre class="prettyprint lines">
+&lt;span class="acc-trigger"&gt;
+    &lt;a href="#"&gt; [TITLE] &lt;/a&gt;
+&lt;/span&gt;
+
+&lt;div class="acc-container"&gt;
+    &lt;div class="content"&gt; [CONTENT] &lt;/div&gt;
+&lt;/div&gt;&lt;!-- end .acc-container --&gt;
+
+[...] 
+</pre>
+		
+		<hr>
+		
+		<h4>Tabs</h4>
+		
+		<p>The important part with tabs is that each list item's <code class="prettyprint">href</code> attribute has to match with <code class="prettyprint">.tabs-container</code>'s tab id.</p>
+				
+<pre class="prettyprint lines">
+&lt;ul class="tabs-nav"&gt;
+
+    &lt;li class="active"&gt;
+        &lt;a href="#tab1"&gt; [TAB_NAME] &lt;/a&gt;
+    &lt;/li&gt;
+	
+    [...]
+	
+&lt;/ul&gt;&lt;!-- end .tabs-nav --&gt;
+
+&lt;div class="tabs-container"&gt;
+
+    &lt;div class="tab-content" id="tab1"&gt; [TAB_CONTENT] &lt;/div&gt;&lt;!-- end #tab1 --&gt;
+
+    [...]
+
+&lt;/div&gt;&lt;!-- end .tabs-container --&gt;
+</pre>
+    	
+		<hr>
+		
+		<h4>Alert Boxes</h4>
+		
+<pre class="prettyprint lines">
+&lt;p class="error"&gt; [CONTENT] &lt;/p&gt;
+
+&lt;p class="success"&gt; [CONTENT] &lt;/p&gt;
+
+&lt;p class="info"&gt; [CONTENT] &lt;/p&gt;
+
+&lt;p class="notice"&gt; [CONTENT] &lt;/p&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>Info Box</h4>
+		
+<pre class="prettyprint lines">
+&lt;div class="infobox"&gt; [CONTENT] &lt;/div&gt;&lt;!-- end .infobox --&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>List Styles</h4>
+		
+<pre class="prettyprint lines">
+&lt;ul class="none"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="arrow"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="arrow-2"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="circle"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="check"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="check-2"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="star"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="plus"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="dash"&gt; [CONTENT] &lt;/ul&gt;
+
+&lt;ul class="dotted"&gt; [CONTENT] &lt;/ul&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>Dropcaps</h4>
+				
+<pre class="prettyprint lines">
+&lt;span class="dropcap"&gt; [CONTENT] &lt;/span&gt;
+
+&lt;span class="dropcap dark"&gt; [CONTENT] &lt;/span&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>Blockquotes</h4>
+				
+		<p><code class="prettyprint">.simple</code> is meant to be used only with blog posts in carousel, but nothing stops you to use it also outside of it.</p>
+		
+<pre class="prettyprint lines">
+&lt;blockquote&gt; [CONTENT] &lt;/blockquote&gt;
+
+&lt;blockquote class="simple"&gt; [CONTENT] &lt;/blockquote&gt;
+</pre>
+
+		<hr>
+		
+		<h4>Buttons</h4>
+		
+<pre class="prettyprint lines">
+&lt;a class="button" href="#"&gt; [CONTENT] &lt;/a&gt;
+
+&lt;a class="button medium" href="#"&gt; [CONTENT] &lt;/a&gt;
+
+&lt;a class="button large" href="#"&gt; [CONTENT] &lt;/a&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>Horizontal Line</h4>
+		
+		<p>Besides the default horizontal line (<code class="prettyprint">&lt;hr /&gt;</code>), you have also one extra classes available: <code class="prettyprint">.dotted</code> <code class="prettyprint">.col4</code> will do exactly what the name says, it changes the line style to dotted.</p>
+		
+<pre class="prettyprint lines">
+&lt;hr class="dotted" /&gt;
+</pre>
+
+		<hr>
+		
+		<h3 id="pricing-tables">A. 6) Pricing Tables</h3>
+		
+		<p>Both the pricing tables can have up to 5 columns, and the column count can be easily changed with <code class="prettyprint">.col*</code> class. You can also highlight specific columns with <code class="prettyprint">.free</code> and <code class="prettyprint">.featured</code> classes. But you'll also need to remember to add <code class="prettyprint">.featured</code> class to the pricing table itself, or otherwise the table may look a bit weird.</p>
+		
+		<p>And the basic table structure is basically identical in both ones: <code class="prettyprint">Pricing Table > Colum > Header + Features + Footer</code></p>
+		
+		<h4>Simple pricing table</h4>
+				
+		<p></p>
+		
+<pre class="prettyprint lines">
+&lt;section class="simple-pricing-table col4 clearfix"&gt;
+
+    &lt;div class="column"&gt;
+
+        &lt;div class="header"&gt;
+            &lt;h2 class="title"&gt; [TITLE] &lt;/h2&gt;
+            &lt;h3 class="price"&gt;&lt;span&gt; [PRICE] &lt;/span&gt; [CONTENT] &lt;/h3&gt;
+            &lt;h5 class="description"&gt; [DESCRIPTION] &lt;/h5&gt;
+        &lt;/div&gt;&lt;!-- end .header --&gt;
+
+        &lt;ul class="features"&gt;
+            &lt;li&gt; [CONTENT] &lt;/li&gt;    
+            [...]
+        &lt;/ul&gt;&lt;!-- end .features --&gt;
+
+        &lt;div class="footer"&gt;
+            &lt;a class="button" href="#"&gt; [CONTENT] &lt;/a&gt;
+        &lt;/div&gt;&lt;!-- end .footer --&gt;
+        
+    &lt;/div&gt;&lt;!-- end .column --&gt;
+    
+    [...]
+
+&lt;/section&gt;&lt;!-- end .simple-pricing-table --&gt;
+</pre>
+        
+    	<hr>
+		
+		<h4>Extended pricing table</h4>
+				
+		<p>Extended pricing table has a small difference when compared to simple version and that's the <code class="prettyprint">.features-list</code>. But you don't need to fear it, since it has exactly the same structure as normal column, except <code class="prettyprint">.header</code> and <code class="prettyprint">.footer</code> are empty.</p>
+				
+		<p>This next step requires a little extra work (just tiny copy&amp;paste task), but it's totally worth it, because it allows mobile/tablet users to see all the important content as in desktop browsers. So now when your pricing table otherwise done, the last thing is that you'll need to add <code class="prettyprint">data-feature</code> attribute to every "normal" column list item and then fill that with the current row's "title", from <code class="prettyprint">.features-list</code>.</p>
+		
+		<p>If you don't have any idea what I'm talking about, that's totally fine! Just check <strong>pricing-tables.html</strong> file to see full examples of the both pricing tables!</p>
+		
+<pre class="prettyprint lines">
+&lt;section class="extended-pricing-table col4 clearfix"&gt;
+
+    &lt;div class="column features-list"&gt;
+
+        &lt;div class="header"&gt;&nbsp;&lt;/div&gt;&lt;!-- end .header --&gt;
+
+        &lt;ul class="features"&gt;
+            &lt;li&gt; [CONTENT] &lt;/li&gt;
+            [...]
+        &lt;/ul&gt;&lt;!-- end .features --&gt;
+
+        &lt;div class="footer"&gt;&nbsp;&lt;/div&gt;&lt;!-- end .footer --&gt;
+        
+    &lt;/div&gt;&lt;!-- end .column.features-list --&gt;
+
+    &lt;div class="column"&gt;
+
+        &lt;div class="header"&gt;
+            &lt;h2 class="title"&gt; [TITLE] &lt;/h2&gt;
+            &lt;h3 class="price"&gt;&lt;span&gt; [PRICE] &lt;/span&gt; [CONTENT] &lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- end .header --&gt;
+
+        &lt;ul class="features clearfix"&gt;
+            &lt;li data-feature=" [CONTENT] "&gt; [CONTENT] &lt;/li&gt;    
+            [...]
+        &lt;/ul&gt;&lt;!-- end .features --&gt;
+
+        &lt;div class="footer"&gt;
+            &lt;a class="button" href="#"&gt; [CONTENT] &lt;/a&gt;
+        &lt;/div&gt;&lt;!-- end .footer --&gt;
+        
+    &lt;/div&gt;&lt;!-- end .column --&gt;
+    
+    [...]
+    
+&lt;/section&gt;&lt;!-- end .extended-pricing-table --&gt;
+</pre>
+		
+		<hr>
+		
+		<h4>Tooltips</h4>
+		
+		<p>You can also add tooltips to describe features in <code class="prettyprint">.features</code> list:</p>
+<pre class="prettyprint lines">
+&lt;li data-tooltip=" [TOOLTIP_CONTENT] "&gt; [CONTENT] &lt;/li&gt;    
+</pre>
+		
+		<hr>
+		
+		<h2 id="css"><strong>B) CSS Files &amp; Structure</strong> - <a href="#toc">top</a></h2>
+		
+		<p>All css files are located in <strong>css</strong> folder:</p>
+		
+		<ul>
+			<li><strong>audioplayerv1.css</strong></li>
+			<li><strong>audioplayerv1.min.css</strong></li>
+			<li><strong>fancybox.css</strong></li>
+			<li><strong>fancybox.min.css</strong></li>
+			<li><strong>style.css</strong></li>
+			<li><strong>video-js.css</strong></li>
+			<li><strong>video-js.min.css</strong></li>
+		</ul>
+		
+		<p>As you can see, theme doesn't have separate CSS file for IE, but unfortunately this doesn't mean that there wouldn't be any IE specific css rules. Theme has three custom class for this purpose: <code class="prettyprint">.ie7</code>, <code class="prettyprint">.ie8</code> and <code class="prettyprint">.not-ie</code>. <code class="prettyprint">.ie7</code> is just for IE7, <code class="prettyprint">.ie8</code> for IE8 and older and <code class="prettyprint">.not-ie</code> is for any other browser except IE8 and older.</p>
+		
+		<p>You may also wonder what are all those conditional comments in document head:</p>
+				
+<pre class="prettyprint lines linenums">
+&lt;!DOCTYPE html&gt;
+
+&lt;!--[if IE 7]&gt;                  &lt;html class="ie7 no-js" lang="en"&gt;     &lt;![endif]--&gt;
+&lt;!--[if lte IE 8]&gt;              &lt;html class="ie8 no-js" lang="en"&gt;     &lt;![endif]--&gt;
+&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt; &lt;html class="not-ie no-js" lang="en"&gt;  &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
+    
+    &lt;title&gt;Home - SmartStart&lt;/title&gt;
+    
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="author" content=""&gt;
+    
+    &lt;!--[if !lte IE 6]&gt;&lt;!--&gt;
+        &lt;link rel="stylesheet" href="css/style.css" media="screen" /&gt;
+
+        &lt;link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic" /&gt;
+        
+        &lt;link rel="stylesheet" href="css/fancybox.min.css" media="screen" /&gt;
+
+        &lt;link rel="stylesheet" href="css/audioplayerv1.min.css" media="screen" /&gt;
+    &lt;!--&lt;![endif]--&gt;
+
+    &lt;!--[if lte IE 6]&gt;
+        &lt;link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection"&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- HTML5 Shiv + detect touch events --&gt;
+    &lt;script src="js/modernizr.custom.js"&gt;&lt;/script&gt;
+
+    &lt;!-- HTML5 video player --&gt;
+    &lt;script src="js/video.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;_V_.options.flash.swf = 'http://demo.samuli.me/smartstart/js/video-js.swf';&lt;/script&gt;
+&lt;/head&gt;
+</pre>
+        
+		<p>In plain English the part above means:</p>
+		
+		<ol>
+			<li><strong>Line 3:</strong> Apply this only if browser is IE7</li>
+			<li><strong>Line 4:</strong> Apply this only if browser is IE8 or older</li>
+			<li><strong>Line 5:</strong> Apply this only if browser is anything else but IE8 or older</li>
+			<li><strong>Line 16-24:</strong> Apply these only if browser is not IE6 or older</li>
+			<li><strong>Line 26-28:</strong> Apply these only if browser is IE6 or older</li>
+			<li><strong>Line 30-32:</strong> Apply this only if browser is IE8 or older</li>
+		</ol>
+
+		<hr />
+		
+		<p>And lastly but definitely not least, here is simple list where you can find every section with ease:</p>
+		
+		<ol>
+			<li><strong>Reset & Clearfix</strong> - Line 1</li>
+			<li><strong>Basic Elements & Classes</strong> - Line 24</li>
+			<li><strong>Generic Classes</strong> - Line 253</li>
+			<li><strong>Lists</strong> - Line 273</li>
+			<li><strong>Alert Boxes</strong> - Line 312</li>
+			<li><strong>Forms</strong> - Line 349</li>
+			<li><strong>Wrap</strong> - Line 420
+				<ol>
+					<li><strong>Columns</strong> - Line 430</li>
+				</ol>
+			</li>
+			<li><strong>Header</strong> - Line 451
+				<ol>
+					<li><strong>Main Navigation</strong> - Line 466</li>
+				</ol>
+			</li>
+			<li><strong>Content</strong> - Line 599
+				<ol>
+					<li><strong>Page Header</strong> - Line 607</li>
+					<li><strong>Main</strong> - Line 660
+						<ol>
+							<li><strong>Columns</strong> - Line 676</li>
+						</ol>
+					</li>
+					<li><strong>Image Gallery Slider</strong> - Line 690</li>
+					<li><strong>Widgets</strong> - Line 758
+						<ol>
+							<li><strong>Accordion Content</strong> - Line 762</li>
+							<li><strong>Content Tabs</strong> - Line 820</li>
+						</ol>
+					</li>
+					<li><strong>Pricing Tables</strong> - Line 878
+						<ol>
+							<li><strong>Simple Pricing Table</strong> - Line 918</li>
+							<li><strong>Extended Pricing Table</strong> - Line 1037</li>
+						</ol>
+					</li>
+					<li><strong>Back to Top</strong> - Line 1175</li>
+				</ol>
+			</li>
+			<li><strong>Home</strong> - Line 1202
+				<ol>
+					<li><strong>Slider</strong> - Line 1206
+						<ol>
+							<li><strong>Single Slide</strong> - Line 1225</li>
+							<li><strong>Button</strong> - Line 1279</li>
+							<li><strong>Content</strong> - Line 1391</li>
+							<li><strong>Pagination</strong> - Line 1503</li>
+							<li><strong>Active Slide Bar</strong> - Line 1587</li>
+						</ol>
+					</li>
+					<li><strong>Projects Carousel</strong> - Line 1604</li>
+					<li><strong>Post Carousel</strong> - Line 1695</li>
+					<li><strong>Projects & Post Carousel Navigation</strong> - Line 1751</li>
+				</ol>
+			</li>
+			<li><strong>Our Team</strong> - Line 7802</li>
+			<li><strong>Blog</strong> - Line 1880
+				<ol>
+					<li><strong>Comments</strong> - Line 1983</li>
+					<li><strong>Respond</strong> - Line 2068</li>
+					<li><strong>Pagination</strong> - Line 2083</li>
+				</ol>
+			</li>
+			<li><strong>Portfolio</strong> - Line 2118
+				<ol>
+					<li><strong>Single Project</strong> - Line 2204</li>
+				</ol>
+			</li>
+			<li><strong>Contact Us</strong> - Line 2254</li>
+			<li><strong>Sidebar</strong> - Line 2313
+				<ol>
+					<li><strong>Widgets</strong> - Line 2324
+						<ol>
+							<li><strong>Categories</strong> - Line 2337</li>
+							<li><strong>Accordion Content</strong> - Line 2360</li>
+							<li><strong>Tweets</strong> - Line 2388</li>
+							<li><strong>Flickr Images</strong> - Line 2417</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li><strong>Footer</strong> - Line 2441
+				<ol>
+					<li><strong>Footer Navigation</strong> - Line 2487</li>
+					<li><strong>Contact Info</strong> - Line 2524</li>
+					<li><strong>Social Links</strong> - Line 2547</li>
+					<li><strong>Misc Elements</strong> - Line 2682</li>
+				</ol>
+			</li>
+			<li><strong>Footer Bottom</strong> - Line 2710</li>
+			<li><strong>Media Queries</strong> - Line 27343
+				<ol>
+					<li><strong>Standard 960 or larger (browsers)</strong> - Line 2747</li>
+					<li><strong>Smaller than standard 960 (devices and browsers)</strong> - Line 2871</li>
+					<li><strong>Tablet Portrait size to standard 960 (devices and browsers)</strong> - Line 3001</li>
+					<li><strong>All Mobile Sizes (devices and browser)</strong> - Line 3157</li>
+					<li><strong>Mobile Landscape Size to Tablet Portrait (devices and browsers)</strong> - Line 3419</li>
+					<li><strong>Mobile Portrait Size to Mobile Landscape Size (devices and browsers)</strong> - Line 3518</li>
+				</ol>
+			</li>
+		</ol>
+		
+		<hr>
+		
+		<h2 id="javascript"><strong>C) Javascript Plugins/Scripts</strong> - <a href="#toc">top</a></h2>
+		
+		<p>All Javascript files are located in <strong>js</strong> folder. By default theme uses minified version of the all scripts to reduce page loading times and to save your site bandwidth, but you can also find uncompressed version from the same folder.</p>
+		
+		<p>All used JavaScript scripts can be found from bottom of every page:</p>
+		
+<pre class="prettyprint lines">
+&lt;!--[if !lte IE 6]&gt;&lt;!--&gt;
+    &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;window.jQuery || document.write('&lt;script src="js/jquery-1.7.1.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+    &lt;!--[if lt IE 9]&gt; &lt;script src="js/selectivizr-and-extra-selectors.min.js"&gt;&lt;/script&gt; &lt;![endif]--&gt;
+    &lt;script src="js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.easing-1.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.fancybox.pack.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.smartStartSlider.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.jcarousel.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.cycle.all.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.isotope.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/audioplayerv1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="//maps.google.com/maps/api/js?sensor=false"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.gmap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.touchSwipe.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/custom.js"&gt;&lt;/script&gt;
+&lt;!--&lt;![endif]--&gt;
+</pre>
+
+		<ol>
+			<li><strong>jquery-1.7.1.min.js</strong> - JavaScript Library (If CDN file isn't available, theme will use local file)</li>			
+			<li><strong>selectivizr-and-extra-selectors-min.js</strong> - CSS3 pseudo-class and attribute selectors for IE 6-8</li>			
+			<li><strong>respond.min.js</strong> - A fast & lightweight polyfill for min/max-width CSS3 Media Queries</li>
+			<li><strong>jquery.easing-1.3.min.js</strong> - More easing options for sliders</li>
+			<li><strong>jquery.fancybox.pack.js</strong> - Fancy jQuery Lightbox Alternative</li>
+			<li><strong>jjquery.smartStartSlider.min.js</strong> - The homepage slider</li>
+			<li><strong>jquery.jcarousel.min.js</strong> - jQuery plugin for controlling a list of items in horizontal or vertical order</li>
+			<li><strong>jquery.cycle.all.js</strong> - A slideshow plugin that supports many different types of transition effects</li>
+			<li><strong>jquery.isotope.min.js</strong> - An exquisite jQuery plugin for magical layouts</li>
+			<li><strong>audioplayerv1.min.js</strong> - A simple and elegant looking HTML5/Flash audio playing solution with some thoughtful features</li>
+			<li><strong>jquery.gmap.min.js</strong> - jQuery plugin embedding Google Maps into website</li>
+			<li><strong>jquery.touchSwipe.min.js</strong> - jQuery plugin to be used on touch input devices such as iPad, iPhone etc.</li>
+			<li><strong>custom.js</strong> - All Javascript settings &amp; custom scripts</li>
+		</ol>
+
+		<hr />
+		
+		<p>And lastly but definitely not least, here is simple list where you can find every section with ease from <strong>custom.js</strong> file:</p>
+		
+		
+		<ol>
+			<li><strong>Custom Functions</strong> - Line 7</li>
+			<li><strong>Detect Touch Device</strong> - Line 54</li>
+			<li><strong>Main Navigation</strong> - Line 67</li>
+			<li><strong>Min-height</strong> - Line 112</li>
+			<li><strong>Fancybox</strong> - Line 151</li>
+			<li><strong>Features Slider</strong> - Line 224</li>
+			<li><strong>Logos Slider</strong> - Line 288</li>
+			<li><strong>Photos Slider</strong> - Line 352</li>
+			<li><strong>Projects Carousel & Post Carousel</strong> - Line 416</li>
+			<li><strong>Image Gallery Slider</strong> - Line 542</li>
+			<li><strong>Portfolio Filter</strong> - Line 651</li>
+			<li><strong>VideoJS</strong> - Line 723</li>
+			<li><strong>FitVids</strong> - Line 781</li>
+			<li><strong>AudioPlayerV1</strong> - Line 859</li>
+			<li><strong>Google Maps</strong> - Line 940</li>
+			<li><strong>Accordion Content</strong> - Line 967</li>
+			<li><strong>Content Tabs</strong> - Line 999</li>
+			<li><strong>PHP Widgets</strong> - Line 1034</li>
+			<li><strong>Contact Form</strong> - Line 1075</li>
+			<li><strong>UItoTop (Back to Top)</strong> - Line 1120</li>
+		</ol>
+		
+		<hr>
+				
+		<h3 id="js-homepage-slider">C. 1) Homepage Slider</h3>
+		
+		<p>All the default options:</p>
+		
+<pre class="prettyprint lines">
+var settings = {
+    // zero-based index of the first slide to be displayed
+    pos                : 0,
+    // slide container width
+    width              : 940,
+    // slide container height
+    height             : 380,
+    // speed of the transition
+    contentSpeed       : 450,
+    // options: default (empty) | center | bottom
+    contentPosition    : '',
+    // show content only on mouseover
+    showContentOnhover : false,
+    // hide content
+    hideContent        : false,
+    // time between slide transitions (0 to disable autoplay)
+    timeout            : 3000,
+    // stop autoplay on click
+    pause              : true,
+    // pause autoplay on mouseover
+    pauseOnHover       : true,
+    // hide bottom navigation buttons
+    hideBottomButtons  : false,
+    type            : {
+        // options: def | fade | seqFade | horizontalSlide | seqHorizontalSlide
+        // verticalSlide | seqVerticalSlide | verticalSlideAlt | seqVerticalSlideAlt | random
+        mode      : 'def',
+        // speed of the transition
+        speed     : 400,
+        // easing type for the animation
+        easing    : 'jswing',
+        // this is the interval between each slide's animation 
+        // used for seqFade, seqHorizontalSlide, seqVerticalSlide & seqVerticalSlideAlt  
+        seqfactor : 100
+    }
+};
+</pre>
+
+		<hr>
+				
+		<h3 id="js-fancybox">C. 2) Fancybox</h3>
+		
+		<p>If you haven't used Fancybox ever before, you should check these code snippets:</p>
+		
+		<p><strong>Single image</strong></p>
+		
+<pre class="prettyprint lines">
+&lt;a href="img/full-image.jpg" class="single-image" title="Here is optional title"&gt; [...] &lt;/a&gt;
+</pre>
+		
+		<p><strong>Image Gallery</strong></p>
+		
+<pre class="prettyprint lines">
+&lt;a href="img/full-image.jpg" class="image-gallery" title="Here is optional title 1" rel="group-one"&gt; [...] &lt;/a&gt;
+&lt;a href="img/full-image.jpg" class="image-gallery" title="Here is optional title 2" rel="group-one"&gt; [...] &lt;/a&gt;
+
+&lt;a href="img/full-image.jpg" class="image-gallery" title="Here is the title 1" rel="custom-group"&gt; [...] &lt;/a&gt;
+&lt;a href="img/full-image.jpg" class="image-gallery" title="Here is the title 2" rel="custom-group"&gt; [...] &lt;/a&gt;
+</pre>
+		
+		<p><strong>Iframe</strong></p>
+		
+<pre class="prettyprint lines">
+&lt;a href="http://google.fi/" class="iframe" title="Here is optional title"&gt; [...] &lt;/a&gt;
+</pre>
+		
+		<p>A lot more info and examples can be found from <a href="http://fancybox.net/">Fancybox homepage</a>.</p>
+		
+		<p>The default zoom icon is plus (+), but optionally you can also use <code class="prettyprint">.video</code> and  <code class="prettyprint">.link</code> classes to change it. So for example:</p>
+		
+<pre class="prettyprint lines">
+&lt;a href="http://www.youtube.com/watch?v=_Oez98CDo4Y" class="iframe video" title="Youtube video"&gt; [...] &lt;/a&gt;
+</pre>
+
+    	<hr>
+				
+		<h3 id="js-portfolio-filter">C. 3) Portfolio Filter</h3>
+		
+		<p>There shouldn't be any needs to modify this but if you decide to do so, documentation for Isotope can be found from <a href="http://isotope.metafizzy.co/docs/introduction.html">here</a>.</p>
+
+		<hr>
+		
+		<h3 id="js-carousel">C. 4) Projects Carousel & Post Carousel</h3>
+				
+		<p>If you need any help with these carousels, the documentation can be found from <a href="http://sorgalla.com/jcarousel/">here</a>.</p>
+
+		<hr>
+		
+		<h3 id="js-html5-video-audio">C. 5) HTML5 video & audio</h3>
+		
+		<h4>HTML5 video</h4>
+		
+		<p>Using HTML5 videos in your site isn't that hard, as you can see in the example below. But have also option to use <a href="http://videojs.com/tag-builder/" target="_blank">HMTL5 Video Tag Builder</a>, which generates all the needed stuff automatically. Unfortunately it's not totally perfect for this template, since it's using fixed dimensions.</p>		
+		
+		<p>To make responsive videos, you'll need to remove both <code class="prettyprint">width</code> and <code class="prettyprint">height</code> attributes and set aspect ratio (<code class="prettyprint">data-aspect-ratio</code>) instead. By default it's set to <em>1.78</em> (16:9), so if that's fine for you, you can basically just remove that attribute. But in case you need to change it, here's one excellent tool for that task: <a href="http://www.digitalrebellion.com/webapps/aspect_calc.html" target="_blank">Aspect Ratio Calculator</a>.<p>
+		
+<pre class="prettyprint lines">
+&lt;video class='video-js vjs-default-skin' poster=" [IMG_POSTER_URL] " data-aspect-ratio='1.78' data-setup="{}" controls&gt;
+    &lt;source src=" [MP4_VIDEO_URL] " type="video/mp4" /&gt;
+    &lt;source src=" [WEBM_VIDEO_URL] " type="video/webm" /&gt;
+    &lt;source src=" [OGV_VIDEO_URL] " type="video/ogg" /&gt;
+&lt;/video&gt;
+</pre>
+
+		<p>Remember also to update the location of the self-hosted <strong>video-js.swf</strong> file in every <strong>.html</strong> file at line 37.</p>
+		
+<pre class="prettyprint lines linenums:37">
+_V_.options.flash.swf = 'http://demo.samuli.me/smartstart/js/video-js.swf';
+</pre>
+
+		<p>Plugin documentation: <a href="http://videojs.com/docs/" target="_blank">HTML5 Video Player | Video.js</a><br/>
+		Some info about the element itself: <a href="http://html5doctor.com/the-video-element/" target="_blank">The video element | HTML5 Doctor</a></p>
+
+		<hr>
+		
+		<h4>HTML5 audio</h4>
+		
+		<p>Using HTML5 audio isn't that much different, just remember to use <code class="prettyprint">.AudioPlayerV1</code> to enable custom design.</p>
+		
+<pre class="prettyprint lines">
+&lt;audio class="AudioPlayerV1" controls&gt;
+    &lt;source src=" [MP3_AUDIO_URL] " type="audio/mp3" /&gt;
+    &lt;source src=" [OGG_AUDIO_URL] " type="audio/ogg" /&gt;
+&lt;/audio&gt;
+</pre>
+
+		<p>Plugin documentation: <a href="http://2.s3.envato.com/files/18011939/index.html" target="_blank">Simple HTML5 Audio Player | Video.js</a><br/>
+		Some info about the element itself: <a href="http://html5doctor.com/native-audio-in-the-browser/" target="_blank">Native Audio in the browser | HTML5 Doctor</a></p>
+
+		<hr>
+		
+		<h3 id="js-google-maps">C. 6) Google Maps</h3>
+				
+		<p>The contact page map can be configure in <strong>js/custom.js file</strong>. The basic options are already there and they are pretty self-evident, but in case you need any help, you can check the documentation from <a href="http://www.smashinglabs.pl/gmap/documentation">here</a>.</p>
+
+		<hr>
+		
+		<h2 id="psds"><strong>F) PSDs</strong> - <a href="#toc">top</a></h2>
+		
+		<p>All .psd files are located in <strong>_PSD</strong> folder.</p>
+
+		<ol>
+			<li><strong>Home</strong> (homepage.psd)</li>
+			<li><strong>Sliders</strong> (sliders.psd)</li>
+			<li><strong>About</strong> (about-us.psd)</li>
+			<li><strong>We Are Hiring</strong> (hiring.psd)</li>
+			<li><strong>Our Team</strong> (team.psd)</li>
+			<li><strong>Pricing Tables</strong> (pricing_table.psd)</li>
+			<li><strong>Portfolio</strong> (portfolio.psd)</li>
+			<li><strong>Single Project</strong> (portfolio-detail.psd)</li>
+			<li><strong>Blog</strong> (blog.psd)</li>
+			<li><strong>Single Post</strong> (blog-detail.psd)</li>
+			<li><strong>Contact</strong> (contact-us.psd)</li>
+		</ol>
+		
+		<hr>
+
+		<h2 id="credits"><strong>G) Source and Credits</strong> - <a href="#toc">top</a></h2>
+				
+		<p>People and their links who I wanna thank to.</p>
+		
+		<ol>
+			
+			<li><strong>jQuery Plugins/Scripts</strong></li>
+			
+			<ul>
+				<li><a href="http://modernizr.com/">modernizr</a> - <em>by Faruk Ates, Paul Irish, Alex Sexton</em></li>
+				<li><a href="http://selectivizr.com/">selectivizr</a> - <i>by Keith Clark</i></li>
+				<li><a href="http://www.keithclark.co.uk/labs/jquery-extended-selectors/">jQuery Extended Selectors</a> - <i>by Keith Clark</i></li>
+				<li><a href="https://github.com/scottjehl/Respond">Respond</a> - <i>by Scott Jehl</i></li>
+				<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a> - <i>by George McGinley Smith</i></li>
+				<li><a href="http://fancyapps.com/fancybox/">Fancybox</a> - <i>by Janis Skarnelis</i></li>
+				<li><a href="http://tympanus.net/codrops/2011/07/03/sliding-background-image-menu/">Sliding Background Image Menu with jQuery</a> - <i>by Mary Lou </i></li>
+				<li><a href="http://sorgalla.com/jcarousel/">jCarousel</a> - <i>by Jan Sorgalla</i></li>
+				<li><a href="http://isotope.metafizzy.co/">Isotope</a> - <i>by David DeSandro</i></li>
+				<li><a href="http://www.malsup.com/jquery/cycle/">jQuery Cycle Plugin</a> - <i>by Mike Alsup</i></li>
+				<li><a href="http://videojs.com/">VideoJS</a> - <em>by Zencoder</em></li>
+				<li><a href="http://codecanyon.net/item/simple-html5-audio-player-v1/495024">Simple HTML5 Audio Player V1</a> - <em>by Ivan da Silveira</em></li>
+				<li><a href="http://www.smashinglabs.pl/gmap">jQuery gMap v3</a> - <i>by Sebastian Poreba</i></li>
+			</ul>
+			
+			<li><strong>PHP Scripts</strong></li>
+			
+			<ul>
+				<li><a href="http://dev-tips.com/featured/ajax-and-php-contact-form">Contact Form</a> - <i>by Drew Douglass</i></li>
+				<li><a href="http://f6design.com/journal/2010/10/07/display-recent-twitter-tweets-using-php/">Twitter Feed Parser</a> - <i>Jonathan Nicol</i></li>
+			</ul>
+			
+			<li><strong>Icons</strong></li>
+			
+			<ul>
+				<li><a href="http://www.iconsweets2.com/">iconSweets 2</a> - <i>by Yummygum</i></li>
+				<li><a href="http://www.alexpeattie.com/projects/justvector_icons/">JustVector Social Icons 1.5</a> - <i>by Alex Peattie</i></li>
+			</ul>
+				
+		</ol>
+		
+		<hr>
+		
+		<h2 id="changelog"><strong>H) Changelog</strong> - <a href="#toc">top</a></h2>
+		
+		<h4>v1.1 - 31.5.2012</h4>
+		
+		<ul>		
+			<li><strong>Fixed:</strong> All known bugs</li>
+			<li><strong>Improved:</strong> iPad usability</li>
+			<li><strong>Improved:</strong> Contact form (clear the form on submit)</li>
+			<li><strong>Improved:</strong> New custom HTML5 video & audio players</li>
+			<li><strong>Updated/Improved:</strong> JS & PHP plugins</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Updated Files:</strong>
+				<ol>
+					<li>index.html <span class="red">+ all other .html pages</span> <em>(Lines 23, 25, 35-37, 521, 526 & 529)</em></li>
+					<li>css/fancybox.css</li>
+					<li>css/fancybox.min.css</li>
+					<li>css/style.css <em>(Lines 38, 91, 109, 130, 135-147, 187-251, 316, 329, 336, 343, 390, 395, 397, 404-409, 603-605, 613, 616, 635, 670-674, 696, 699-721, 725-740, 753-754, 958, 1179-1198, 1231-1247, 1269-1273, 1289, 1316, 1324, 1329, 1341, 1367-1381, 1385-1386, 1400, 1410-1414, 1419, 1451, 1507-1533, 1540-1543, 1574, 1591-1602, 1614, 1622, 1626, 1631, 1639, 1641, 1645-1647, 1650, 1652, 1654, 1659, 1666, 1671, 1688, 1693, 1705, 1733-1737, 1739-1741, 1749, 1757, 1762, 1798-1799, 1846-1848, 1895-1907, 1937, 1947-1972, 1979-1981, 2041-2043, 2046, 2049, 2080, 2095, 2099-2109, 2142, 2153-2158, 2166-2170, 2242-2252, 2293, 2301, 2305-2306, 2320, 2390-2392, 2400, 2406-2408, 2412-2414, 2453, 2465, 2470, 2499-2507, 2582, 2587-2590, 2594-2598, 2623-2633, 2637, 2649-2659, 2682-2708, 2861-2867, 2874-2943, 2982-2989, 3087, 3107, 3264-3270, 3309, 3334, 3476, 3595, 3603-3646 & 3661-3676)</em></li>
+					<li>js/custom.js <em>(Lines 95, 116-147, 155-220, 234-257, 298-321, 362-385, 428-500, 525-533, 548, 558, 579, 594-596, 603-609, 620-633, 707, 713, 724-9399, 1010-1029 & 1102-1107)</em></li>
+					<li>js/jquery.cycle.all.js</li>
+					<li>js/jquery.cycle.all.min.js</li>
+					<li>js/jquery.gmap.js</li>
+					<li>js/jquery.gmap.min.js</li>
+					<li>js/jquery.isotope.js</li>
+					<li>js/jquery.isotope.min.js</li>
+					<li>js/jquery.jcarousel.js</li>
+					<li>js/jquery.smartStartSlider.js</li>
+					<li>js/jquery.smartStartSlider.min.js</li>
+					<li>js/respond.min.js</li>
+					<li>js/respond.src.js</li>
+					<li>php/config.php <em>(Lines 15 & 18)</em></li>
+					<li>php/flickr.php <em>(Lines 10, 12, 17, 59, 61, 80, 85 & 101-103)</em></li>
+					<li>php/tweets.php <em>(Lines 30, 78, 80, 88, 95, 105-185, 188, 193-194 & 216-217)</em></li>
+				</ol>
+			</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Added Files:</strong>
+				<ol>
+					<li>css/audioplayerv1.css</li>
+					<li>css/audioplayerv1.min.css</li>
+					<li>css/video-js.css</li>
+					<li>css/video-js.min.css</li>
+					<li>img/audioplayerv1.png</li>
+					<li>img/blank.gif</li>
+					<li>img/fancybox_buttons.png</li>
+					<li>img/fancybox_loading.gif</li>
+					<li>img/fancybox_loading.gif</li>
+					<li>img/icon-post-formats.png</li>
+					<li>img/video-js.png</li>
+					<li>img/placeholders/html5-video-poster.jpg</li>
+					<li>js/audioplayerv1.js</li>
+					<li>js/audioplayerv1.min.js</li>
+					<li>js/audioplayerv1.swf</li>
+					<li>js/jquery.fancybox.js</li>
+					<li>js/jquery.fancybox.pack.js</li>
+					<li>js/jquery.touchSwipe.js</li>
+					<li>js/jquery.touchSwipe.min.js</li>
+					<li>js/video.js</li>
+					<li>js/video.min.js</li>
+					<li>js/video-js.swf</li>
+				</ol>
+			</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Removed Files:</strong>
+				<ol>
+					<li>css/mediaelementplayer.css</li>
+					<li>css/mediaelementplayer.min.css</li>
+					<li>img/icon-post-format-aside.png</li>
+					<li>img/icon-post-format-audio.png</li>
+					<li>img/icon-post-format-image.png</li>
+					<li>img/icon-post-format-link.png</li>
+					<li>img/icon-post-format-quote.png</li>
+					<li>img/icon-post-format-standard.png</li>
+					<li>img/icon-post-format-video.png</li>
+					<li>img/fancybox/</li>
+					<li>img/mediaelement/</li>
+					<li>js/flashmediaelement.swf</li>
+					<li>js/jquery.fancybox-1.3.4.js</li>
+					<li>js/jquery.fancybox-1.3.4.pack.js</li>
+					<li>js/jquery.touchSwipe-1.2.5.js</li>
+					<li>js/jquery.touchSwipe-1.2.5.min.js</li>
+					<li>js/mediaelement-and-player.js</li>
+					<li>js/mediaelement-and-player.min.js</li>
+					<li>js/silverlightmediaelement.xap</li>
+				</ol>
+			</li>
+		</ul>
+		
+		<hr />
+		
+		<h4>v1.04 - 19.3.2012</h4>
+		
+		<ul>		
+			<li><strong>Added:</strong> Back to Top button</li>
+			<li><strong>Added:</strong> Swipe gestures for the sliders & carousels</li>
+			<li><strong>Added:</strong> Option to link individual slides (homepage slider) with Fancybox</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Updated Files:</strong>
+				<ol>
+					<li>index.html <span class="red">+ all other .html pages</span> <em>(Lines 30-31 & 528)</em></li>
+					<li>css/style.css <em>(Lines 1174-1196)</em></li>
+					<li>css/custom.js <em>(Lines 54-68, 182-205, 238-261, 294-317, 353-376, 444-470 & 815-867)</em></li>
+					<li>js/jquery.smartStartSlider.js <em>(Lines 47-59 & 822-871)</em></li>
+					<li>js/jquery.smartStartSlider.min.js</li>
+				</ol>
+			</li>
+		</ul>
+		<ul>
+			<li><strong>Added Files:</strong>
+				<ol>
+					<li>img/arrow-up-large.png</li>
+					<li>js/jquery.touchSwipe-1.2.5.js</li>
+					<li>js/jquery.touchSwipe-1.2.5.min.js</li>
+					<li>js/modernizr.custom.js</li>
+					<li>_PSD/back-to-top.psd</li>
+				</ol>
+			</li>
+		</ul>
+		
+		<hr />
+		
+		<h4>v1.03 - 8.3.2012</h4>
+		
+		<ul>		
+			<li><strong>Fixed:</strong> Columns in single project & post (<code class="prettyprint">#main</code>)</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Updated Files:</strong>
+				<ol>
+					<li>css/style.css <em>(Lines 689-701, 2860-2872, 3017-3025 & 3265-3273)</em></li>
+				</ol>
+			</li>
+		</ul>
+		
+		<hr />
+		
+		<h4>v1.02 - 6.3.2012</h4>
+		
+		<ul>		
+			<li><strong>Added:</strong> Pricing tables with tooltips</li>
+			<li><strong>Fixed/Improved:</strong> Fancybox issues</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Updated Files:</strong>
+				<ol>
+					<li>css/style.css <em>(Lines 192, 196-197, 246-254, 707-709, 863-1182, 1565, 2591-2705, 2725-2744, 2871-2903, 3078-3084, 3251-3270 & 3340-3349)</em></li>
+				</ol>
+			</li>
+		</ul>
+		<ul>
+			<li><strong>Added Files:</strong>
+				<ol>
+					<li>pricing-tables.html</li>
+					<li>img/icon-check-3.png</li>
+					<li>img/icon-check-3-green.png</li>
+					<li>img/zoom-link.png</li>
+					<li>img/zoom-video.png</li>
+					<li>_PSD/pricing_table.jpg</li>
+					<li>_PSD/pricing_table.psd</li>
+				</ol>
+			</li>
+		</ul>
+		
+		<hr />
+		
+		<h4>v1.01 - 26.2.2012</h4>
+		
+		<ul>		
+			<li><strong>Fixed:</strong> Extra horizontal space in homepage slider</li>
+			<li><strong>Fixed:</strong> Portfolio filter flickering bug</li>
+			<li><strong>Improved:</strong> Contact form</li>
+		</ul>
+		
+		<ul>
+			<li><strong>Updated Files:</strong>
+				<ol>
+					<li>css/style.css <em>(Lines 45, 1580, 1656, 1851, 1853, 1860 & 2613)</em></li>
+					<li>js/custom.js <em>(Lines 36-37, 344-345, 382-395 & 640-665)</em></li>
+					<li>js/jquery.smartStartSlider.js <em>(Lines 838-928)</em></li>
+					<li>js/jquery.smartStartSlider.min.js</li>
+					<li>php/contact-send.php</li>
+				</ol>
+			</li>
+		</ul>
+		
+		<h4>v1.0 - Initial version</h4>
+		
+		<hr>	
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong><a href="http://samuli.me/">Samuli Saarinen</a></strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+
+	<script type="text/javascript" src="assets/prettify/prettify.js"></script>
+	<script> prettyPrint(); </script>
+	
+</body>
+</html>
