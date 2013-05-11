@@ -5,14 +5,14 @@
 /* ---------------------------------------------------------------------- */
 
 // The email address where all contact form messages are sent (inbox)
-$your_email_address = 'sandbox@mymail.fi';
+$your_email_address = 'trevor@nextconsultinggroup.org';
 
 /* ---------------------------------------------------------------------- */
 /*	Latest Tweets
 /* ---------------------------------------------------------------------- */
 
 // The Twitter account
-$your_twitter_username = 'envato';
+$your_twitter_username = 'NEXTConsult';
 
 // How many tweets will be displayed
 $tweets_limit = 2;
@@ -34,7 +34,7 @@ $twitter_cachetime = 60*60;
 /* ---------------------------------------------------------------------- */
 
 // The Flickr account ID
-$your_flickr_id = '52617155@N08'; // Get your Flickr ID at http://idgettr.com/
+$your_flickr_id = ''; // Get your Flickr ID at http://idgettr.com/
 
 // How many images will be displayed
 $flickr_limit = 6;
